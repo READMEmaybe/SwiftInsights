@@ -1,1 +1,1 @@
-# SwiftInsights
+# file renamer
