@@ -1,1 +1,1 @@
-# file renamer
+# renamer-cli
