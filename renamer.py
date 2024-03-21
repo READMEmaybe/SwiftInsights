@@ -2,6 +2,7 @@ import os
 import sys
 import argparse
 import json
+import datetime
 
 
 def parse_args():
@@ -12,7 +13,7 @@ def parse_args():
                         help="Path to the directory containing files and directories to be renamed.")
 
     parser.add_argument('-p', '--pattern',
-                        help="Naming pattern for renaming files and directories. Use placeholders like {name}, {index}, {date}, etc.")
+                        help="Naming pattern for renaming files and directories. Use placeholders like {name}, {parent}, {date}, etc.")
 
     parser.add_argument('-f', '--files-only',
                         action='store_true',
@@ -108,7 +109,9 @@ def rename_and_log(directory, pattern, files, directories, interactive):
             continue
         old_path = os.path.join(directory, filename)
         base_name, file_extension = os.path.splitext(filename)
-        new_name = pattern.format(name=base_name, ext=file_extension)
+        date = datetime.datetime.now().strftime("%Y%m%d")
+        parent_dir = os.path.basename(os.path.dirname(old_path))
+        new_name = pattern.format(name=base_name, ext=file_extension, date=date, parent=parent_dir)
         new_path = os.path.join(directory, new_name)
         if interactive:
             confirm = input(f"Rename '{filename}' to '{new_name}'? (y/n): ")
@@ -120,7 +123,9 @@ def rename_and_log(directory, pattern, files, directories, interactive):
     # rename directories
     for dirname in directories:
         old_path = os.path.join(directory, dirname)
-        new_name = pattern.format(name=dirname, ext='')
+        date = datetime.datetime.now().strftime("%Y%m%d")
+        parent_dir = os.path.basename(os.path.dirname(old_path))
+        new_name = pattern.format(name=dirname, ext='', date=date, parent=parent_dir)
         new_path = os.path.join(directory, new_name)
         if interactive:
             confirm = input(f"Rename '{dirname}' to '{new_name}'? (y/n): ")
