@@ -81,10 +81,10 @@ def filter_files_and_directories(directory, files_only, directories_only, extens
     for item in files_and_dirs:
         item_path = os.path.join(directory, item)
         if os.path.isfile(item_path):
-            item_extension = os.path.splitext(item)[1].lower()
+            item_extension = os.path.splitext(item)[1]
             if extensions is None:
                 files.append(item)
-            elif item_extension in [ext.lower() if not ext.startswith('.') else ext[1:].lower() for ext in extensions]:
+            elif item_extension[1:] in [ext if not ext.startswith('.') else ext[1:] for ext in extensions]:
                 files.append(item)
         elif os.path.isdir(item_path):
             directories.append(item)
