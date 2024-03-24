@@ -114,6 +114,32 @@ Effortlessly revert the last renaming operation with the undo feature.
 ![Undo option](https://vhs.charm.sh/vhs-4ngOm4nTPNHrdjOC8tKPjR.gif)
 
 
-# Contributing
+## Contributing
 
-# License
+Thank you for considering contributing to renamer-cli! Contributions are welcome from everyone.
+
+### How to Contribute
+
+If you'd like to contribute to renamer-cli, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes and commit them to your branch.
+4. Push your changes to your fork.
+5. Submit a pull request to the main repository.
+
+### Code Style
+
+Please adhere to the project's code style and conventions.
+
+### Reporting Issues
+
+If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository.
+
+### Contact
+
+If you have any questions or need further assistance, feel free to reach out via GitHub issues.
+
+### License
+
+This project is licensed under the [MIT License](LICENSE).
