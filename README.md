@@ -19,7 +19,7 @@ Renamer-CLI is a simple command-line tool designed to streamline file management
   - [Interactive](#interactive)
   - [Recursive](#recursive)
   - [Undo](#undo)
-- [Contrubuting](#contrubuting)
+- [Contributing](#contributing)
 - [License](#license)
 
 
@@ -136,10 +136,6 @@ Please adhere to the project's code style and conventions.
 
 If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository.
 
-### Contact
-
-If you have any questions or need further assistance, feel free to reach out via GitHub issues.
-
-### License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
